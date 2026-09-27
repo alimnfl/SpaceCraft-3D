@@ -1,5 +1,6 @@
 import { Catalog } from "@/constants/CatalogRecord";
 import { cn } from "@/tools/cn";
+import Image from "next/image";
 
 type WorkspacePaletteProps = {
   activeCategory: Catalog.Type;
@@ -119,12 +120,19 @@ export function WorkspacePalette({
                 <div className="flex items-center gap-3">
                   <div
                     className={cn(
-                      "h-11 w-11 shrink-0",
-                      "rounded-lg border border-black/5",
+                      "relative h-11 w-11 shrink-0",
+                      "overflow-hidden rounded-lg border border-black/5",
                       "shadow-inner",
                     )}
-                    style={{ background: item.color }}
-                  />
+                  >
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      sizes="44px"
+                      className="object-cover"
+                    />
+                  </div>
 
                   <div className="min-w-0 flex-1">
                     <div className="truncate text-sm font-medium text-stone-900">

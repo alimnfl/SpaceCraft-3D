@@ -15,6 +15,7 @@ export namespace Catalog {
     type: Type;
     name: string;
     price: number;
+    image: string;
     color: string;
     kind: "procedural" | "glb";
     asset?: string;
@@ -200,6 +201,20 @@ export namespace Catalog {
     VintageTable: "/models/vintage-table.glb",
     DeskLamp: "/models/desk-lamp.glb",
     Lamp: "/models/lamp.glb",
+    HousePlant: "/models/house-plant.glb",
+  } as const;
+
+  export const AssetImages = {
+    Beautilia: "/images/beautilia.png",
+    Chair: "/images/chair.png",
+    DeskLamp: "/images/desk-lamp.png",
+    FlatMonitor: "/images/flat-monitor.png",
+    Lamp: "/images/lamp.png",
+    Monstera: "/images/monstera.png",
+    RattanTable: "/images/rattan-table.png",
+    VintageMonitor: "/images/vintage-monitor.png",
+    VintageTable: "/images/vintage-table.png",
+    WoodChair: "/images/wood-chair.png",
   } as const;
 
   export const ITEMS: Item[] = [
@@ -208,6 +223,7 @@ export namespace Catalog {
       name: "Rattan Desk",
       price: 450000,
       color: "#C9A876",
+      image: AssetImages.RattanTable,
       kind: "procedural",
     },
     {
@@ -215,6 +231,7 @@ export namespace Catalog {
       name: "Vintage Desk",
       price: 500000,
       color: "#C9A876",
+      image: AssetImages.VintageTable,
       kind: "glb",
       asset: Asset.VintageTable,
     },
@@ -222,7 +239,8 @@ export namespace Catalog {
       type: Type.Chair,
       name: "Wood Chair",
       price: 280000,
-      color: "#e2e2e2",
+      color: "#E2E2E2",
+      image: AssetImages.WoodChair,
       kind: "glb",
       asset: Asset.WoodChair,
     },
@@ -231,6 +249,7 @@ export namespace Catalog {
       name: "Office Chair",
       price: 280000,
       color: "#4A6741",
+      image: AssetImages.Chair,
       kind: "glb",
       asset: Asset.Chair,
     },
@@ -239,6 +258,7 @@ export namespace Catalog {
       name: 'Flat Monitor 27"',
       price: 280000,
       color: "#241A14",
+      image: AssetImages.FlatMonitor,
       kind: "glb",
       asset: Asset.FlatMonitor,
     },
@@ -247,6 +267,7 @@ export namespace Catalog {
       name: 'Vintage Monitor 27"',
       price: 280000,
       color: "#241A14",
+      image: AssetImages.VintageMonitor,
       kind: "glb",
       asset: Asset.VintageMonitor,
     },
@@ -255,6 +276,7 @@ export namespace Catalog {
       name: "Lamp",
       price: 60000,
       color: "#B5533C",
+      image: AssetImages.Lamp,
       kind: "glb",
       asset: Asset.Lamp,
     },
@@ -263,6 +285,7 @@ export namespace Catalog {
       name: "Desk Lamp",
       price: 60000,
       color: "#B5533C",
+      image: AssetImages.DeskLamp,
       kind: "glb",
       asset: Asset.DeskLamp,
     },
@@ -271,7 +294,17 @@ export namespace Catalog {
       name: "Monstera",
       price: 40000,
       color: "#4A6741",
+      image: AssetImages.Monstera,
       kind: "procedural",
+    },
+    {
+      type: Type.Plant,
+      name: "Beautilia",
+      price: 40000,
+      color: "#4A6741",
+      image: AssetImages.Beautilia,
+      kind: "glb",
+      asset: Asset.HousePlant,
     },
   ];
 }

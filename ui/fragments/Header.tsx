@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/tools/cn";
+import { RiArrowUpLine } from "@remixicon/react";
 import Image from "next/image";
 
 export default function Header() {
@@ -28,15 +29,15 @@ export default function Header() {
         </h1>
         <p className="mt-1 text-sm text-stone-500">
           Most items use GLB models, while some are procedurally generated with
-          Three.js. Drag the empty space to look around and scroll to zoom.
+          Three.js.
         </p>
         <a
           href="https://alimnfl.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-1 inline-block text-sm text-blue-600 transition-colors hover:text-blue-700 hover:underline"
+          className="mt-1 items-center gap-1 text-sm text-blue-600 transition-colors hover:text-blue-700 hover:underline flex-row flex"
         >
-          alimnfl.com ↗
+          alimnfl.com <RiArrowUpLine size={14} className="rotate-45" />
         </a>
       </div>
     </header>

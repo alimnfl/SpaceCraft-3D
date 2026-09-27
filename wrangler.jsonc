@@ -1,8 +1,9 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "portfolio",
+  "name": "alimnfl-3d-desent-io",
   "compatibility_date": "2026-09-16",
   "assets": {
     "directory": "./out",
   },
+  "previews": {},
 }
