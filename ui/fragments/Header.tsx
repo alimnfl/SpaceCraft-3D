@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/tools/cn";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -12,7 +13,16 @@ export default function Header() {
         "px-6 py-5",
       )}
     >
-      <div>
+      <div
+        className={cn(
+          "rounded-full ",
+          "bg-white px-4 py-2 pb-3",
+          "text-xs font-semibold tracking-wide text-stone-700",
+        )}
+      >
+        <Image src={"/icon.png"} width={100} height={100} alt="icon" />
+      </div>
+      <div className="flex text-end flex-col justify-end items-end w-[60%]">
         <h1 className="text-xl font-semibold tracking-tight text-stone-900">
           Alim Naufal x Desent.io | 3D Models Choose
         </h1>
@@ -28,15 +38,6 @@ export default function Header() {
         >
           alimnfl.com ↗
         </a>
-      </div>
-      <div
-        className={cn(
-          "rounded-full border border-stone-300",
-          "bg-white px-4 py-2",
-          "text-xs font-semibold tracking-wide text-stone-700",
-        )}
-      >
-        monis.rent · Bali
       </div>
     </header>
   );
