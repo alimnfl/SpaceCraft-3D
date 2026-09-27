@@ -64,12 +64,7 @@ export default function WorkspaceBuilder() {
     [placed],
   );
 
-  const isReady = useMemo(
-    () =>
-      placed.some((item) => item.def.type === "desk") &&
-      placed.some((item) => item.def.type === "chair"),
-    [placed],
-  );
+  const isReady = useMemo(() => placed.length > 0, [placed]);
 
   const updateCamera = useCallback(() => {
     const camera = cameraRef.current;
