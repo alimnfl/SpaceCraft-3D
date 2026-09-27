@@ -686,6 +686,32 @@ export default function WorkspaceBuilder() {
     }
   };
 
+  const removeItem = useCallback((item: Catalog.PlacedItem) => {
+    const scene = sceneRef.current;
+
+    if (!scene) return;
+
+    scene.remove(item.group);
+
+    placedRef.current = placedRef.current.filter(
+      (placedItem) => placedItem !== item,
+    );
+
+    if (selectedRef.current === item) {
+      selectedRef.current = null;
+      setSelected(null);
+
+      const box = selectionBoxRef.current;
+
+      if (box) {
+        scene.remove(box);
+        selectionBoxRef.current = null;
+      }
+    }
+
+    setPlaced([...placedRef.current]);
+  }, []);
+
   return (
     <main
       className={cn(
@@ -713,7 +739,14 @@ export default function WorkspaceBuilder() {
         removeSelected={removeSelected}
       />
 
-      <WorkspaceSummary placed={placed} total={total} isReady={isReady} />
+      <WorkspaceSummary
+        placed={placed}
+        total={total}
+        isReady={isReady}
+        onSelect={(item) => selectItem(item.group)}
+        onRemove={removeItem}
+        selected={selected}
+      />
     </main>
   );
 }
