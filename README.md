@@ -5,7 +5,9 @@ An interactive 3D workspace configurator built with **Next.js, React, TypeScript
 Users can browse workspace items, drag them into a 3D scene, move and rotate them, adjust their scale, and inspect the estimated total rental price.
 
 **Live site:** https://desent.alimnfl.com
+
 **Linkedin:** https://linkedin.com/in/alimnfl
+
 **Personal Website:** https://alimnfl.com
 
 ## Features
