@@ -197,6 +197,9 @@ export namespace Catalog {
     WoodChair: "/models/wood-chair.glb",
     FlatMonitor: "/models/flat-tv.glb",
     VintageMonitor: "/models/vintage-monitor.glb",
+    VintageTable: "/models/vintage-table.glb",
+    DeskLamp: "/models/desk-lamp.glb",
+    Lamp: "/models/lamp.glb",
   } as const;
 
   export const ITEMS: Item[] = [
@@ -206,6 +209,14 @@ export namespace Catalog {
       price: 450000,
       color: "#C9A876",
       kind: "procedural",
+    },
+    {
+      type: Type.Desk,
+      name: "Vintage Desk",
+      price: 500000,
+      color: "#C9A876",
+      kind: "glb",
+      asset: Asset.VintageTable,
     },
     {
       type: Type.Chair,
@@ -241,10 +252,19 @@ export namespace Catalog {
     },
     {
       type: Type.Lamp,
-      name: "Task Lamp",
+      name: "Lamp",
       price: 60000,
       color: "#B5533C",
-      kind: "procedural",
+      kind: "glb",
+      asset: Asset.Lamp,
+    },
+    {
+      type: Type.Lamp,
+      name: "Desk Lamp",
+      price: 60000,
+      color: "#B5533C",
+      kind: "glb",
+      asset: Asset.DeskLamp,
     },
     {
       type: Type.Plant,
