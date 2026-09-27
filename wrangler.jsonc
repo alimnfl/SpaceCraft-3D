@@ -1,8 +1,9 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "portfolio",
+  "name": "desent-io-3D",
   "compatibility_date": "2026-09-16",
   "assets": {
     "directory": "./out",
   },
+  "previews": {},
 }
