@@ -3,14 +3,20 @@ import { cn } from "@/tools/cn";
 
 type WorkspaceSummaryProps = {
   placed: Catalog.PlacedItem[];
+  selected: Catalog.PlacedItem | null;
   total: number;
   isReady: boolean;
+  onSelect: (item: Catalog.PlacedItem) => void;
+  onRemove: (item: Catalog.PlacedItem) => void;
 };
 
 export function WorkspaceSummary({
   placed,
+  selected,
   total,
   isReady,
+  onSelect,
+  onRemove,
 }: WorkspaceSummaryProps) {
   return (
     <aside
@@ -37,25 +43,54 @@ export function WorkspaceSummary({
           </div>
         ) : (
           <div className="space-y-1">
-            {placed.map((item, index) => (
-              <div
-                key={`${item.def.type}-${index}`}
-                className={cn(
-                  "flex items-center justify-between",
-                  "rounded-lg px-2 py-2.5",
-                  "text-sm transition",
-                  "hover:bg-white",
-                )}
-              >
-                <span className="truncate pr-3 text-stone-700">
-                  {item.def.name}
-                </span>
+            {placed.map((item, index) => {
+              const active = selected === item;
 
-                <span className="shrink-0 text-xs font-medium text-stone-500">
-                  {Catalog.formatRupiah(item.def.price)}
-                </span>
-              </div>
-            ))}
+              return (
+                <div
+                  key={`${item.def.type}-${index}`}
+                  className={cn(
+                    "flex items-center gap-2",
+                    "rounded-lg px-2 py-2",
+                    "transition",
+                    active
+                      ? "bg-white shadow-sm ring-1 ring-stone-200"
+                      : "hover:bg-white",
+                  )}
+                >
+                  <button
+                    type="button"
+                    onClick={() => onSelect(item)}
+                    className={cn(
+                      "min-w-0 flex-1 text-left",
+                      "text-sm transition",
+                      active ? "font-medium text-stone-900" : "text-stone-700",
+                    )}
+                  >
+                    <span className="block truncate">{item.def.name}</span>
+
+                    <span className="mt-0.5 block text-xs font-medium text-stone-500">
+                      {Catalog.formatRupiah(item.def.price)}
+                    </span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => onRemove(item)}
+                    aria-label={`Remove ${item.def.name}`}
+                    className={cn(
+                      "shrink-0 rounded-md p-1.5",
+                      "text-stone-400",
+                      "transition",
+                      "hover:bg-stone-100 hover:text-stone-700",
+                      "active:scale-95",
+                    )}
+                  >
+                    ×
+                  </button>
+                </div>
+              );
+            })}
           </div>
         )}
       </div>
@@ -70,7 +105,6 @@ export function WorkspaceSummary({
         <button
           type="button"
           disabled={!isReady}
-          // onClick={handleRent}
           className={cn(
             "mt-4 w-full rounded-xl",
             "px-4 py-3",
