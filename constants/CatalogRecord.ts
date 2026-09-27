@@ -194,6 +194,7 @@ export namespace Catalog {
 
   export const Asset = {
     Chair: "/models/chair.glb",
+    WoodChair: "/models/wood-chair.glb",
     FlatMonitor: "/models/flat-tv.glb",
   } as const;
 
@@ -207,7 +208,15 @@ export namespace Catalog {
     },
     {
       type: Type.Chair,
-      name: "Sheen Chair",
+      name: "Wood Chair",
+      price: 280000,
+      color: "#e2e2e2",
+      kind: "glb",
+      asset: Asset.WoodChair,
+    },
+    {
+      type: Type.Chair,
+      name: "Office Chair",
       price: 280000,
       color: "#4A6741",
       kind: "glb",
