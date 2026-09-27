@@ -196,6 +196,7 @@ export namespace Catalog {
     Chair: "/models/chair.glb",
     WoodChair: "/models/wood-chair.glb",
     FlatMonitor: "/models/flat-tv.glb",
+    VintageMonitor: "/models/vintage-monitor.glb",
   } as const;
 
   export const ITEMS: Item[] = [
@@ -232,10 +233,11 @@ export namespace Catalog {
     },
     {
       type: Type.Monitor,
-      name: '27" Monitor',
-      price: 150000,
+      name: 'Vintage Monitor 27"',
+      price: 280000,
       color: "#241A14",
-      kind: "procedural",
+      kind: "glb",
+      asset: Asset.VintageMonitor,
     },
     {
       type: Type.Lamp,
