@@ -44,15 +44,21 @@ export function WorkspacePalette({
                 type="button"
                 onClick={() => setActiveCategory(category)}
                 className={cn(
+                  "cursor-pointer",
                   "rounded-xl border px-3 py-2.5",
                   "text-left text-xs font-medium",
                   "transition-all duration-150",
+                  "hover:shadow-sm",
+                  "active:translate-y-0 active:scale-[0.98]",
                   active
                     ? [
                         "border-stone-900",
                         "bg-stone-900",
                         "text-white",
                         "shadow-sm",
+                        "hover:border-stone-900",
+                        "hover:bg-stone-800",
+                        "hover:shadow-md",
                       ]
                     : [
                         "border-stone-200",
@@ -60,6 +66,7 @@ export function WorkspacePalette({
                         "text-stone-600",
                         "hover:border-stone-300",
                         "hover:bg-stone-50",
+                        "hover:text-stone-900",
                       ],
                 )}
               >
