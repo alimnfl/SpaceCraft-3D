@@ -137,13 +137,14 @@ Catalog data is kept separately from the rendering logic.
 Each item defines information such as:
 
 ```ts
-type Item = {
-  type: Type;
-  name: string;
-  price: number;
-  kind: "glb" | "procedural";
-  asset?: string;
-  color?: string;
+export type Item = {
+    type: Type;
+    name: string;
+    price: number;
+    image: string;
+    color: string;
+    kind: "procedural" | "glb";
+    asset?: string
 };
 ```
 
