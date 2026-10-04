@@ -2,7 +2,6 @@
 
 import { cn } from "@/tools/cn";
 import { RiArrowUpLine } from "@remixicon/react";
-import Image from "next/image";
 
 export default function Header() {
   return (
@@ -14,21 +13,13 @@ export default function Header() {
         "px-6 py-5",
       )}
     >
-      <div
-        className={cn(
-          "rounded-full ",
-          "bg-white px-4 py-2 pb-3",
-          "text-xs font-semibold tracking-wide text-stone-700",
-        )}
-      >
-        <Image src={"/icon.png"} width={100} height={100} alt="icon" />
-      </div>
-      <div className="flex text-end flex-col justify-end items-end w-[60%]">
+      <div className="flex flex-col ">
         <h1 className="text-xl font-semibold tracking-tight text-stone-900">
-          Alim Naufal x Desent.io | 3D Models Choose
+          Space Craft: Build Your Own 3D Scene
         </h1>
         <p className="mt-1 text-sm text-stone-500">
-          Most items use GLB models, while some are procedurally generated with
+          Choose, arrange, and combine objects to build your own 3D scene. Some
+          objects use GLB models, while others are generated procedurally with
           Three.js.
         </p>
         <a
