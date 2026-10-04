@@ -32,8 +32,8 @@ export namespace Catalog {
     baseY: number;
   };
 
-  export const formatRupiah = (value: number) =>
-    `Rp ${value.toLocaleString("id-ID")}`;
+  export const formatUSD = (value: number) =>
+    `$${value.toLocaleString("en-US")}`;
 
   function createMaterial(color: string) {
     return new THREE.MeshStandardMaterial({
@@ -221,7 +221,7 @@ export namespace Catalog {
     {
       type: Type.Desk,
       name: "Rattan Desk",
-      price: 450000,
+      price: 450,
       color: "#C9A876",
       image: AssetImages.RattanTable,
       kind: "procedural",
@@ -229,7 +229,7 @@ export namespace Catalog {
     {
       type: Type.Desk,
       name: "Vintage Desk",
-      price: 500000,
+      price: 500,
       color: "#C9A876",
       image: AssetImages.VintageTable,
       kind: "glb",
@@ -238,7 +238,7 @@ export namespace Catalog {
     {
       type: Type.Chair,
       name: "Wood Chair",
-      price: 280000,
+      price: 280,
       color: "#E2E2E2",
       image: AssetImages.WoodChair,
       kind: "glb",
@@ -247,7 +247,7 @@ export namespace Catalog {
     {
       type: Type.Chair,
       name: "Office Chair",
-      price: 280000,
+      price: 280,
       color: "#4A6741",
       image: AssetImages.Chair,
       kind: "glb",
@@ -256,7 +256,7 @@ export namespace Catalog {
     {
       type: Type.Monitor,
       name: 'Flat Monitor 27"',
-      price: 280000,
+      price: 280,
       color: "#241A14",
       image: AssetImages.FlatMonitor,
       kind: "glb",
@@ -265,7 +265,7 @@ export namespace Catalog {
     {
       type: Type.Monitor,
       name: 'Vintage Monitor 27"',
-      price: 280000,
+      price: 280,
       color: "#241A14",
       image: AssetImages.VintageMonitor,
       kind: "glb",
@@ -274,7 +274,7 @@ export namespace Catalog {
     {
       type: Type.Lamp,
       name: "Lamp",
-      price: 60000,
+      price: 60,
       color: "#B5533C",
       image: AssetImages.Lamp,
       kind: "glb",
@@ -283,7 +283,7 @@ export namespace Catalog {
     {
       type: Type.Lamp,
       name: "Desk Lamp",
-      price: 60000,
+      price: 60,
       color: "#B5533C",
       image: AssetImages.DeskLamp,
       kind: "glb",
@@ -292,7 +292,7 @@ export namespace Catalog {
     {
       type: Type.Plant,
       name: "Monstera",
-      price: 40000,
+      price: 40,
       color: "#4A6741",
       image: AssetImages.Monstera,
       kind: "procedural",
@@ -300,7 +300,7 @@ export namespace Catalog {
     {
       type: Type.Plant,
       name: "Beautilia",
-      price: 40000,
+      price: 40,
       color: "#4A6741",
       image: AssetImages.Beautilia,
       kind: "glb",
