@@ -77,7 +77,7 @@ export function WorkspaceSummary({
                       <span className="block truncate">{item.def.name}</span>
 
                       <span className="mt-0.5 block text-xs font-medium text-stone-500">
-                        {Catalog.formatRupiah(item.def.price)}
+                        {Catalog.formatUSD(item.def.price)}
                       </span>
                     </button>
 
@@ -104,7 +104,7 @@ export function WorkspaceSummary({
 
         <div className="border-t border-stone-200 pt-5">
           <div className="text-2xl font-semibold tracking-tight text-stone-900">
-            {Catalog.formatRupiah(total)}
+            {Catalog.formatUSD(total)}
           </div>
 
           <div className="mt-0.5 text-xs text-stone-400">per month</div>
@@ -174,7 +174,7 @@ export function WorkspaceSummary({
                   </div>
 
                   <div className="shrink-0 text-sm font-medium text-stone-700">
-                    {Catalog.formatRupiah(item.def.price)}
+                    {Catalog.formatUSD(item.def.price)}
                   </div>
                 </div>
               ))}
@@ -186,7 +186,7 @@ export function WorkspaceSummary({
               <span className="text-sm text-stone-500">Monthly rental</span>
 
               <span className="text-lg font-semibold text-stone-900">
-                {Catalog.formatRupiah(total)}
+                {Catalog.formatUSD(total)}
               </span>
             </div>
 
@@ -194,7 +194,7 @@ export function WorkspaceSummary({
               <div className="flex items-center justify-between text-xs">
                 <span className="text-stone-400">Delivery</span>
 
-                <span className="font-medium text-stone-600">Bali</span>
+                <span className="font-medium text-stone-600">Indonesia</span>
               </div>
 
               <div className="mt-2 flex items-center justify-between text-xs">

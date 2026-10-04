@@ -140,7 +140,7 @@ export function WorkspacePalette({
                     </div>
 
                     <div className="mt-0.5 text-xs text-stone-500">
-                      {Catalog.formatRupiah(item.price)}/mo
+                      {Catalog.formatUSD(item.price)}/mo
                     </div>
                   </div>
                 </div>
