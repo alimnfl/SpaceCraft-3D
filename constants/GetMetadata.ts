@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 
-const BASE_TITLE = "Monis: Rent Everything You Need to Work Anywhere.";
+const BASE_TITLE = "SpaceCraft: Create Your Perfect Space.";
+
 const BASE_DESCRIPTION =
-  "Monis makes it easy to rent monitors, desks, chairs, computers, and more for your workspace. Get fully equipped with flexible rentals and convenient delivery in Bali.";
+  "SpaceCraft makes it easy to design and customize your space with furniture, equipment, and more. Arrange everything in 3D and create a space that works for you.";
 
 export function createMetadata(title?: string, description?: string): Metadata {
   return {
