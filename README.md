@@ -1,10 +1,10 @@
-# 3D Workspace Builder
+# SpaceCraft: A Procedural 3D Playground
 
 An interactive 3D workspace configurator built with **Next.js, React, TypeScript, and Three.js**.
 
 Users can browse workspace items, drag them into a 3D scene, move and rotate them, adjust their scale, and inspect the estimated total rental price.
 
-**Live site:** https://desent.alimnfl.com
+**Live site:** https://spacecraft.alimnfl.com
 
 **Linkedin:** https://linkedin.com/in/alimnfl
 
@@ -138,13 +138,13 @@ Each item defines information such as:
 
 ```ts
 export type Item = {
-    type: Type;
-    name: string;
-    price: number;
-    image: string;
-    color: string;
-    kind: "procedural" | "glb";
-    asset?: string
+  type: Type;
+  name: string;
+  price: number;
+  image: string;
+  color: string;
+  kind: "procedural" | "glb";
+  asset?: string;
 };
 ```
 
